@@ -1,0 +1,466 @@
+/**
+ * Export Manager Component Styles
+ * Modern, professional design with comprehensive export options
+ */
+
+@import '../styles/modernDesignSystem.css';
+
+.export-manager {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--secondary-200);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 500px;
+}
+
+/* Header */
+.export-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--secondary-100);
+  background: linear-gradient(135deg, var(--secondary-50), white);
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.title-icon {
+  color: var(--primary-600);
+}
+
+.header-title h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--secondary-900);
+  margin: 0;
+}
+
+/* Format Section */
+.format-section {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--secondary-200);
+}
+
+.format-section h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--secondary-900);
+  margin: 0 0 1rem 0;
+}
+
+.format-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.format-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--secondary-50);
+  border: 2px solid var(--secondary-200);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.format-card:hover {
+  background: white;
+  border-color: var(--primary-300);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.format-card.active {
+  background: var(--primary-50);
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+.format-icon {
+  color: var(--primary-600);
+  flex-shrink: 0;
+}
+
+.format-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.format-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--secondary-900);
+}
+
+.format-description {
+  font-size: 0.75rem;
+  color: var(--secondary-600);
+}
+
+/* Options Section */
+.options-section {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--secondary-200);
+}
+
+.options-section h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--secondary-900);
+  margin: 0 0 1rem 0;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--secondary-700);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: var(--radius-md);
+  transition: background 0.2s ease;
+}
+
+.checkbox-label:hover {
+  background: var(--secondary-50);
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 1.125rem;
+  height: 1.125rem;
+  accent-color: var(--primary-500);
+}
+
+/* Export Status */
+.export-status {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  margin: 1rem 1.5rem;
+  border-radius: var(--radius-lg);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.export-status.success {
+  background: var(--success-50);
+  border: 1px solid var(--success-200);
+  color: var(--success-700);
+}
+
+.export-status.error {
+  background: var(--error-50);
+  border: 1px solid var(--error-200);
+  color: var(--error-700);
+}
+
+.export-status.info {
+  background: var(--primary-50);
+  border: 1px solid var(--primary-200);
+  color: var(--primary-700);
+}
+
+.status-success {
+  color: var(--success-600);
+}
+
+.status-error {
+  color: var(--error-600);
+}
+
+.status-info {
+  color: var(--primary-600);
+}
+
+/* Export Actions */
+.export-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-top: 1px solid var(--secondary-200);
+  background: var(--secondary-50);
+}
+
+.export-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.info-text {
+  font-size: 0.875rem;
+  color: var(--secondary-600);
+  font-weight: 500;
+}
+
+/* Quick Export */
+.quick-export {
+  padding: 1.5rem;
+  border-top: 1px solid var(--secondary-200);
+}
+
+.quick-export h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--secondary-900);
+  margin: 0 0 1rem 0;
+}
+
+.quick-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.quick-actions .btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* Loading Spinner */
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--secondary-200);
+  border-top: 2px solid var(--primary-500);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .format-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .options-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .export-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .format-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .export-actions {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .quick-actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .format-card {
+    padding: 0.75rem;
+  }
+  
+  .format-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .format-name {
+    font-size: 0.813rem;
+  }
+  
+  .format-description {
+    font-size: 0.688rem;
+  }
+  
+  .quick-actions .btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.813rem;
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover Effects */
+.format-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.checkbox-label:hover {
+  background: var(--secondary-50);
+}
+
+/* Focus States */
+.format-card:focus {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+}
+
+.checkbox-label:focus-within {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .export-manager {
+    background: var(--secondary-900);
+    border-color: var(--secondary-700);
+  }
+  
+  .export-header {
+    background: linear-gradient(135deg, var(--secondary-800), var(--secondary-900));
+    border-color: var(--secondary-700);
+  }
+  
+  .header-title h3 {
+    color: var(--secondary-100);
+  }
+  
+  .format-section {
+    border-color: var(--secondary-700);
+  }
+  
+  .format-section h4 {
+    color: var(--secondary-100);
+  }
+  
+  .format-card {
+    background: var(--secondary-800);
+    border-color: var(--secondary-600);
+  }
+  
+  .format-card:hover {
+    background: var(--secondary-700);
+    border-color: var(--primary-500);
+  }
+  
+  .format-card.active {
+    background: var(--primary-900);
+    border-color: var(--primary-500);
+  }
+  
+  .format-name {
+    color: var(--secondary-100);
+  }
+  
+  .format-description {
+    color: var(--secondary-400);
+  }
+  
+  .options-section {
+    border-color: var(--secondary-700);
+  }
+  
+  .options-section h4 {
+    color: var(--secondary-100);
+  }
+  
+  .checkbox-label {
+    color: var(--secondary-300);
+  }
+  
+  .checkbox-label:hover {
+    background: var(--secondary-800);
+  }
+  
+  .export-status.success {
+    background: var(--success-900);
+    border-color: var(--success-700);
+    color: var(--success-300);
+  }
+  
+  .export-status.error {
+    background: var(--error-900);
+    border-color: var(--error-700);
+    color: var(--error-300);
+  }
+  
+  .export-status.info {
+    background: var(--primary-900);
+    border-color: var(--primary-700);
+    color: var(--primary-300);
+  }
+  
+  .export-actions {
+    background: var(--secondary-800);
+    border-color: var(--secondary-700);
+  }
+  
+  .info-text {
+    color: var(--secondary-400);
+  }
+  
+  .quick-export {
+    border-color: var(--secondary-700);
+  }
+  
+  .quick-export h4 {
+    color: var(--secondary-100);
+  }
+}

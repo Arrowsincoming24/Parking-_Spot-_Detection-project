@@ -1,0 +1,140 @@
+/**
+ * Logo Component Styles
+ * Modern, professional design with animations
+ */
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.logo-container:hover {
+  transform: scale(1.05);
+}
+
+/* Size Variants */
+.logo-small .logo-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.logo-medium .logo-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.logo-large .logo-icon {
+  width: 64px;
+  height: 64px;
+}
+
+.logo-xlarge .logo-icon {
+  width: 96px;
+  height: 96px;
+}
+
+/* Logo Text Styles */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.logo-title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.logo-title-main {
+  color: #0284c7;
+  font-size: 1.5rem;
+  letter-spacing: -0.025em;
+}
+
+.logo-title-sub {
+  color: #22c55e;
+  font-size: 1rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo-tagline {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+}
+
+/* Responsive adjustments for logo text */
+@media (max-width: 640px) {
+  .logo-small .logo-title-main,
+  .logo-medium .logo-title-main {
+    font-size: 1.25rem;
+  }
+  
+  .logo-small .logo-title-sub,
+  .logo-medium .logo-title-sub {
+    font-size: 0.875rem;
+  }
+  
+  .logo-small .logo-tagline,
+  .logo-medium .logo-tagline {
+    font-size: 0.625rem;
+  }
+}
+
+/* Icon-only variant */
+.logo-icon {
+  transition: all 0.3s ease;
+}
+
+.logo-icon.animated {
+  animation: logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Hover effects */
+.logo-icon:hover {
+  filter: drop-shadow(0 4px 8px rgba(14, 165, 233, 0.3));
+}
+
+/* Loading state */
+.logo-icon.loading {
+  animation: logoSpin 2s linear infinite;
+}
+
+@keyframes logoSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .logo-title-main {
+    color: #38bdf8;
+  }
+  
+  .logo-tagline {
+    color: #94a3b8;
+  }
+}
